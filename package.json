@@ -1,0 +1,27 @@
+{
+  "name": "hmap",
+  "version": "0.0.2",
+  "description": "hmap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hmapjs/hmap.git"
+  },
+  "keywords": [
+    "hmap"
+  ],
+  "author": "moonrailgun",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/hmapjs/hmap/issues"
+  },
+  "homepage": "https://github.com/hmapjs/hmap#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "hmap-lexer": "0.0.1",
+    "hmap-parser": "0.0.1"
+  }
+}
