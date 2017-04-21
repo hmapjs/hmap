@@ -10,7 +10,6 @@ const cheerio = require('cheerio');
 module.exports = hmap;
 module.exports.Hmap = Hmap;
 
-//TODO 支持获取属性中的数据
 function hmap(templatePath, html, options) {
   if (!templatePath) {
     throw new Error('templatePath is required');
