@@ -3,4 +3,4 @@ html
     title #{personal-title}
 body
   li.vcard-detail.pt-1.css-truncate.css-truncate-target
-    a(href=link)
+    a(href=link class='url') #{link-display}

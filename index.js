@@ -28,7 +28,7 @@ function hmap(templatePath, html, options) {
 
   let hmaper = new Hmap(templateData, options)
 
-  return hmaper.parseHtml(html);
+  return JSON.parse(JSON.stringify(hmaper.parseHtml(html)));
 };
 
 function Hmap(templateData, options) {
@@ -39,11 +39,9 @@ Hmap.prototype.parseHtml = function(html) {
   let $ = cheerio.load(html);
   let result = {};
   dataList.forEach(function(item) {
-    if(item.type === "Code"){
+    if (item.type === "Code") {
       result[item.val] = $(item.nodePath).text();
-    }else if(item.type === "Tag"){
-      console.log(item.attrName);
-      console.log($(item.nodePath).html());
+    } else if (item.type === "Tag") {
       result[item.val] = $(item.nodePath).attr(item.attrName);
     }
   })
