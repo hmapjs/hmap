@@ -9,6 +9,7 @@ const cheerio = require('cheerio');
 
 module.exports = hmap;
 module.exports.Hmap = Hmap;
+
 function hmap(templatePath, html, options) {
   if(!templatePath) {
     throw new Error('templatePath is required');
