@@ -1,0 +1,5 @@
+html
+  head
+    title #{personal-title}
+body
+  div#submit.btn(src="qwe") #{test}
