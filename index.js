@@ -39,7 +39,13 @@ Hmap.prototype.parseHtml = function(html) {
   let $ = cheerio.load(html);
   let result = {};
   dataList.forEach(function(item) {
-    result[item.val] = $(item.nodePath).text();
+    if(item.type === "Code"){
+      result[item.val] = $(item.nodePath).text();
+    }else if(item.type === "Tag"){
+      console.log(item.attrName);
+      console.log($(item.nodePath).html());
+      result[item.val] = $(item.nodePath).attr(item.attrName);
+    }
   })
 
   return result;

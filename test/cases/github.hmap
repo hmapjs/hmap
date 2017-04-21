@@ -2,4 +2,5 @@ html
   head
     title #{personal-title}
 body
-  div#submit.btn(src="qwe") #{test}
+  li.vcard-detail.pt-1.css-truncate.css-truncate-target
+    a(href=link)

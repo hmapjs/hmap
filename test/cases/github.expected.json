@@ -61,33 +61,36 @@
       "type": "Block",
       "nodes": [{
         "type": "Tag",
-        "name": "div",
+        "name": "li",
         "selfClosing": false,
         "block": {
           "type": "Block",
           "nodes": [{
-            "type": "Code",
-            "val": "test",
-            "buffer": true,
-            "mustEscape": true,
+            "type": "Tag",
+            "name": "a",
+            "selfClosing": false,
+            "block": {
+              "type": "Block",
+              "nodes": [],
+              "line": 6,
+              "filename": "github.hmap"
+            },
+            "attrs": [{
+              "name": "href",
+              "val": "link",
+              "mustEscape": true
+            }],
+            "attributeBlocks": [],
             "isInline": true,
-            "line": 5,
+            "line": 6,
             "filename": "github.hmap"
           }],
           "line": 5,
           "filename": "github.hmap"
         },
         "attrs": [{
-          "name": "id",
-          "val": "'submit'",
-          "mustEscape": false
-        }, {
           "name": "class",
-          "val": "'btn'",
-          "mustEscape": false
-        }, {
-          "name": "src",
-          "val": "\"qwe\"",
+          "val": "\"vcard-detail pt-1 css-truncate css-truncate-target\"",
           "mustEscape": true
         }],
         "attributeBlocks": [],
