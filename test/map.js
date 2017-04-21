@@ -8,7 +8,7 @@ var mapAst = require('../lib/map-ast');
 var filename = 'github.hmap';
 var testCase = fs.readFileSync(__dirname + '/cases/' + filename, 'utf8');
 var tokens = lex(testCase, {filename});
-var ast = parse(Object.assign([], tokens), {filename, src : testCase});
+var ast = parse(Object.assign([], tokens), {filename, src: testCase});
 
 // console.log(JSON.stringify(ast));
-console.log(mapAst(ast,{filename}));
+console.log(mapAst(ast, {filename}));
