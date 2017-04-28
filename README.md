@@ -20,7 +20,7 @@ html
 **javascript file**
 ```javascript
 var hmap = require('hmap');
-var html = '<html><head><title>hmap</title></head>'
+var html = '<html><head><title>hmap</title></head></html>'
 var result = hmap(__dirname + "/test.hmap", html);
 console.log(JSON.stringify(result));
 ```

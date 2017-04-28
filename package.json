@@ -1,7 +1,7 @@
 {
   "name": "hmap",
-  "version": "0.0.4",
-  "description": "hmap",
+  "version": "0.0.7",
+  "description": "hmap is a fast, flexible interpreter for HTML which use jade/pug syntax to describe HTML",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -34,6 +34,10 @@ function Hmap(templateData, options) {
   this.templateData = templateData;
 }
 Hmap.prototype.parseHtml = function(html) {
+  if(!html) {
+    throw new Error('html is required');
+  }
+
   let dataList = JSON.parse(JSON.stringify(this.templateData));
   let $ = cheerio.load(html);
   let result = {};
