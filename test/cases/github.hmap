@@ -1,6 +1,7 @@
 html
   head
     title #{personal-title}
+    div.aa #{test}
 body
   li.vcard-detail.pt-1.css-truncate.css-truncate-target
     a(href=link class='url') #{link-display}
