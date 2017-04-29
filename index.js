@@ -5,6 +5,7 @@ const path = require('path')
 const lex = require('hmap-lexer');
 const parse = require('hmap-parser');
 const mapAst = require('./lib/map-ast');
+const traverse = require('./lib/traverse');
 const cheerio = require('cheerio');
 
 module.exports = hmap;
@@ -23,7 +24,8 @@ function hmap(templatePath, html, options) {
   let content = fs.readFileSync(absPath, 'utf8');
   let tokens = lex(content, {filename});
   let ast = parse(Object.assign([], tokens), {filename, src: content});
-  let templateData = mapAst(ast, {filename});
+  // let templateData = mapAst(ast, {filename});
+  let templateData = traverse(ast, {filename});
 
   let hmaper = new Hmap(templateData, options)
 
@@ -44,8 +46,8 @@ Hmap.prototype.parseHtml = function(html) {
   dataList.forEach(function(item) {
     if (item.type === "Code") {
       result[item.val] = $(item.nodePath).text();
-    } else if (item.type === "Tag") {
-      result[item.val] = $(item.nodePath).attr(item.attrName);
+    } else if (item.type === "Attr") {
+      result[item.val] = $(item.nodePath).attr(item.attrName) || '';
     }
   })
 

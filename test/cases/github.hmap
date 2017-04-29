@@ -4,4 +4,4 @@ html
     div.aa #{test}
 body
   li.vcard-detail.pt-1.css-truncate.css-truncate-target
-    a(href=link class='url') #{link-display}
+    a(href=link class=url) #{link-display}
