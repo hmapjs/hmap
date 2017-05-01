@@ -1,7 +1,7 @@
 # hmap
 hmap is a fast, flexible interpreter for HTML which use jade/pug syntax to describe HTML
 
-## [!!WIP]
+## [WIP]
 **NOW IS NOT A COMPLETED VERSION,JUST FOR SOME PREVIEW FEATURES.PLEASE WAIT FOR PRODUCE VERSION**
 
 ## Install
