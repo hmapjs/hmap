@@ -29,8 +29,10 @@ console.log(JSON.stringify(result));
 ```
 
 **result**
-```json
-{"personal-title":"hmap"}
+```javascript
+{
+  personal-title:"hmap"
+}
 ```
 
 ## Features
