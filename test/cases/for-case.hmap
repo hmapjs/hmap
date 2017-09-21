@@ -1,0 +1,3 @@
+html
+  each val, index in array
+    li #{val}
